@@ -7,7 +7,7 @@ The chatbot provides inspirational and practical guidance by retrieving relevant
 
 ## 🚀 Demo
 
-🌐 [Live App on Streamlit]([https://your-app-name.streamlit.app](https://persona-rag-stevejobs-g3zyzeda6xebk4g83zfvmv.streamlit.app/))
+🌐 [Live App on Streamlit]([https://your-app-name.streamlit.app](https://persona-rag-stevejobs-g3zyzeda6xebk4g83zfvmv.streamlit.app/])
 
 ---
 
