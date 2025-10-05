@@ -45,9 +45,8 @@ The chatbot provides inspirational and practical guidance by retrieving relevant
 
 ---
 
-## ⚙️ Installation
+## 🙋‍♂️ Author
 
-```bash
-git clone https://github.com/<your-username>/steve-jobs-chatbot.git
-cd steve-jobs-chatbot
-pip install -r requirements.txt
+**Ahmed Ragab**  
+🎓 Final Year CS Student | AI & Machine Learning Enthusiast  
+🔗 [LinkedIn](https://www.linkedin.com/in/ahmed-ragab-29a547218/)
