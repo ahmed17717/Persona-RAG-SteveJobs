@@ -4,6 +4,6 @@ sentence-transformers
 google-generativeai
 numpy
 requests
-BeautifulSoup
-json
+beautifulsoup4
 YouTubeTranscriptApi
+
