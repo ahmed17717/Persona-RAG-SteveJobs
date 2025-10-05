@@ -1,0 +1,9 @@
+streamlit
+faiss-cpu
+sentence-transformers
+google-generativeai
+numpy
+requests
+BeautifulSoup
+json
+YouTubeTranscriptApi
