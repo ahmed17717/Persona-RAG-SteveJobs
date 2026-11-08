@@ -56,7 +56,7 @@ The dataset contains excerpts from:
    ```bash
    pip install -r requirements.txt
 
-3.Create a .env file and add your Gemini API key:
+3. Create a .env file and add your Gemini API key:
 
    ```bash
    GEMINI_API_KEY=your_api_key_here
