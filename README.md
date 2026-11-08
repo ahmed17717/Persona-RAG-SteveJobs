@@ -1,52 +1,67 @@
-# Steve Jobs Chatbot
+# Steve Jobs Persona Chatbot
 
-An AI-powered Streamlit web app that emulates the communication style and mentorship philosophy of **Steve Jobs**.  
-The chatbot provides inspirational and practical guidance by retrieving relevant excerpts from Jobs’ real interviews, speeches, and quotes - then crafting context-aware responses using Google’s **Gemini API**.
+A Retrieval-Augmented Generation (RAG) chatbot inspired by Steve Jobs' public interviews, speeches, and quotes.
 
----
+The application retrieves relevant text from a curated dataset and uses Google's Gemini API to generate conversational responses.
 
-## 🚀 Demo
+## Live Demo
 
-🌐 [Live App on Streamlit](https://persona-rag-stevejobs-g3zyzeda6xebk4g83zfvmv.streamlit.app/)
+[Try the application](https://persona-rag-stevejobs-g3zyzeda6xebk4g83zfvmv.streamlit.app/)
 
----
+## Features
 
-## 📌 Features
+- Conversational interface built with Streamlit.
+- Semantic search using Sentence Transformers.
+- FAISS-based vector retrieval.
+- Gemini-powered response generation.
+- Curated dataset containing 713 text segments.
 
-- 💬 **Conversational UI** built with Streamlit  
-- 🧠 **FAISS-based retrieval** for contextually relevant answers  
-- ⚡ **Sentence Transformers** for semantic embeddings  
-- 🤖 **Gemini API integration** for realistic, Jobs-style responses  
-- 🗂️ **Curated dataset** from real Steve Jobs interviews, quotes, and speeches  
+## How It Works
 
----
+1. Load the curated Steve Jobs dataset.
+2. Generate text embeddings using `all-MiniLM-L6-v2`.
+3. Store embeddings in a FAISS index.
+4. Retrieve the 7 most relevant text segments for each question.
+5. Pass the retrieved context to Gemini to generate a response.
 
-## 🧠 How It Works
+## Dataset
 
-1. **Data Collection**  
-   - Text scraped and curated from Jobs’ interviews, Stanford speech, and The Lost Interview.  
-2. **Embedding & Indexing**  
-   - Each text segment is embedded using *Sentence Transformers* (`all-MiniLM-L6-v2`)  
-   - Stored in a **FAISS** vector index for fast semantic search.  
-3. **Contextual Response Generation**  
-   - When a user asks a question, the app retrieves the top relevant text chunks.  
-   - A custom prompt blends those insights with Jobs’ speaking style via **Gemini API**.  
+The dataset contains excerpts from:
 
----
+- Steve Jobs' Stanford commencement speech.
+- The Lost Interview.
+- MIT interview.
+- iPhone launch presentation.
+- Goodreads quotes.
 
-## 🧰 Tech Stack
+## Tech Stack
 
-- **Frontend**: Streamlit  
-- **Backend**: Python  
-- **Embedding Model**: Sentence Transformers (`all-MiniLM-L6-v2`)  
-- **Vector Store**: FAISS  
-- **Language Model**: Google Gemini  
-- **Data Sources**: YouTube transcripts, Goodreads quotes, Stanford speech  
+- Python
+- Streamlit
+- Sentence Transformers
+- FAISS
+- Google Gemini API
+- NumPy
 
----
+## Run Locally
 
-## 🙋‍♂️ Author
+1. Clone the repository:
 
-**Ahmed Ragab**  
-🎓 Final Year CS Student | AI & Machine Learning Enthusiast  
-🔗 [LinkedIn](https://www.linkedin.com/in/ahmed-ragab-29a547218/)
+   ```bash
+   git clone https://github.com/ahmed17717/Persona-RAG-SteveJobs.git
+   cd Persona-RAG-SteveJobs
+   
+2. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+
+3.Create a .env file and add your Gemini API key:
+
+   ```bash
+   GEMINI_API_KEY=your_api_key_here
+   ```
+4. Run the application:
+
+   ```bash
+   streamlit run app.py
