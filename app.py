@@ -9,7 +9,16 @@ import streamlit as st
 
 
 # ================= CONFIG =================
-GENAI_API_KEY = "AIzaSyBrhksB5IMcQm_fFsbQZWRRMmVYdw2LPh8"
+from dotenv import load_dotenv
+
+load_dotenv()
+
+GENAI_API_KEY = os.getenv("GEMINI_API_KEY")
+
+if not GENAI_API_KEY:
+    st.error("GEMINI_API_KEY is missing. Add it to your .env file.")
+    st.stop()
+
 genai.configure(api_key=GENAI_API_KEY)
 
 DATASET_FILE = "data/steve_jobs_dataset.json"
